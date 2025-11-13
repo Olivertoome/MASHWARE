@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Retseptid</title>
 
   <!-- Bricolage Grotesque -->
@@ -10,158 +10,273 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..72,400;12..72,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ÜLAOSA -->
   <header class="site-header">
-    <div class="container header-row">
+    <div class="container head-row">
       <h1 class="page-title">Retseptid</h1>
-      <div class="mascot" aria-hidden="true">👩‍🍳</div>
-      <nav class="top-nav" aria-label="Põhinavigatsioon">
-        <a href="#" class="top-link">Page</a>
-        <a href="#" class="top-link">Page</a>
-        <a href="#" class="top-link">Page</a>
-        <a href="#" class="btn">Sisse</a>
-      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <!-- KAART 1 -->
-    <article class="recipe-card">
-      <div class="recipe-left">
-        <h2 class="recipe-title">Mikrolaineahju kartul</h2>
-        <p class="lead">
-          Lihtne, kiire ja pehme amps. Veenvalt kõige kiirem!
-          (Siia võid lisada lühikese sissejuhatuse teksti.)
-        </p>
+  <main class="container page">
+    <!-- ============== RETSEPT 1 ============== -->
+    <article class="recipe">
+      <div class="recipe__grid">
+        <div class="recipe__left">
+          <section class="box titlebox">
+            <h2 class="heading">Mikrolaineahju kartul</h2>
+            <p class="lead">Superkiire soolane amps – prahvatuslikult lihtne näljakustutaja.</p>
+          </section>
 
-        <div class="cols-2">
-          <section class="box accent">
-            <h3 class="box-title">Koostisosad</h3>
+          <section class="box ingredients">
+            <h3 class="subheading">Koostisosad</h3>
             <ul class="list">
-              <li>1 kartul</li>
-              <li>Mikroahi</li>
+              <li>1 suur kartul</li>
               <li>Veidi soola</li>
+              <li>Võitükk (soovi korral)</li>
             </ul>
           </section>
 
-          <section class="box">
-            <h3 class="box-title">Valmistamine</h3>
+          <section class="box method">
+            <h3 class="subheading">Valmistamine</h3>
             <ol class="list">
               <li>Torka kahvliga augud kartulisse.</li>
-              <li>Pane mikrosse 4–5 minutiks.</li>
-              <li>Lisa soola ja söö uhkelt – sa tegid sooja toidu!</li>
+              <li>Mikro 4–5 minutit, kuni pehme.</li>
+              <li>Sool, võitükk – valmis!</li>
             </ol>
           </section>
         </div>
-      </div>
 
-      <figure class="recipe-media">
-        <img src="images/kartul.jpg" alt="Mikrolaineahju kartul">
-      </figure>
+        <figure class="recipe__media">
+          <img src="images/recipe1.jpg" alt="Mikrolaineahju kartul">
+        </figure>
+      </div>
     </article>
 
-    <!-- KAART 2 (peekon) -->
-    <article class="recipe-card">
-      <div class="recipe-left">
-        <h2 class="recipe-title">Praekartulid peekoniga</h2>
-        <p class="lead">Krõbe peekon + kuldsed kartulid = klassika.</p>
+    <!-- ============== RETSEPT 2 ============== -->
+    <article class="recipe">
+      <div class="recipe__grid">
+        <div class="recipe__left">
+          <section class="box titlebox">
+            <h2 class="heading">Keedetud kartulid tilliga</h2>
+            <p class="lead">Klassika: värske till ja õrnalt võine maitse.</p>
+          </section>
 
-        <div class="cols-2">
-          <section class="box accent">
-            <h3 class="box-title">Koostisosad</h3>
+          <section class="box ingredients">
+            <h3 class="subheading">Koostisosad</h3>
+            <ul class="list">
+              <li>Kartulid</li>
+              <li>Till</li>
+              <li>Või või õli, sool</li>
+            </ul>
+          </section>
+
+          <section class="box method">
+            <h3 class="subheading">Valmistamine</h3>
+            <ol class="list">
+              <li>Keeda soolases vees pehmeks.</li>
+              <li>Lisa hakitud till ja võitükk.</li>
+              <li>Sega õrnalt läbi.</li>
+            </ol>
+          </section>
+        </div>
+
+        <figure class="recipe__media">
+          <img src="images/recipe2.jpg" alt="Keedetud kartulid tilliga">
+        </figure>
+      </div>
+    </article>
+
+    <!-- ============== RETSEPT 3 ============== -->
+    <article class="recipe">
+      <div class="recipe__grid">
+        <div class="recipe__left">
+          <section class="box titlebox">
+            <h2 class="heading">Praekartulid peekoniga</h2>
+            <p class="lead">Krõbe peekon + kuldsed kartulid = õhtusöögi superstaar.</p>
+          </section>
+
+          <section class="box ingredients">
+            <h3 class="subheading">Koostisosad</h3>
             <ul class="list">
               <li>Keedetud kartulid</li>
               <li>Peekon</li>
               <li>Sool</li>
             </ul>
           </section>
-          <section class="box">
-            <h3 class="box-title">Valmistamine</h3>
+
+          <section class="box method">
+            <h3 class="subheading">Valmistamine</h3>
             <ol class="list">
               <li>Prae peekon krõbedaks.</li>
-              <li>Lisa tükeldatud kartulid ja prae koos kuldseks.</li>
-              <li>Vajadusel lisa veidi soola.</li>
+              <li>Lisa tükeldatud kartulid.</li>
+              <li>Prae kuldseks, maitsesta.</li>
             </ol>
           </section>
         </div>
-      </div>
 
-      <figure class="recipe-media">
-        <img src="images/kartul2.jpg" alt="Praekartulid peekoniga">
-      </figure>
+        <figure class="recipe__media">
+          <img src="images/recipe3.jpg" alt="Praekartulid peekoniga">
+        </figure>
+      </div>
     </article>
 
-    <!-- KAART 3 (sibul) -->
-    <article class="recipe-card">
-      <div class="recipe-left">
-        <h2 class="recipe-title">Praekartulid sibulaga</h2>
-        <p class="lead">Lihtne, lõhnav ja alati toimiv.</p>
+    <!-- ============== RETSEPT 4 ============== -->
+    <article class="recipe">
+      <div class="recipe__grid">
+        <div class="recipe__left">
+          <section class="box titlebox">
+            <h2 class="heading">Praekartulid sibulaga</h2>
+            <p class="lead">Magus sibul ja krõbe kartul – lihtne võiduröögatus.</p>
+          </section>
 
-        <div class="cols-2">
-          <section class="box accent">
-            <h3 class="box-title">Koostisosad</h3>
+          <section class="box ingredients">
+            <h3 class="subheading">Koostisosad</h3>
             <ul class="list">
               <li>Keedetud kartulid</li>
               <li>Sibul</li>
-              <li>Õli või rasv</li>
-              <li>Sool</li>
+              <li>Õli või rasv, sool</li>
             </ul>
           </section>
-          <section class="box">
-            <h3 class="box-title">Valmistamine</h3>
+
+          <section class="box method">
+            <h3 class="subheading">Valmistamine</h3>
             <ol class="list">
               <li>Viiluta kartul ja sibul.</li>
               <li>Prae sibul kuldseks.</li>
-              <li>Lisa kartulid ja prae krõbedaks.</li>
-              <li>Maitsesta soolaga.</li>
+              <li>Lisa kartul, prae krõbedaks.</li>
             </ol>
           </section>
         </div>
-      </div>
 
-      <figure class="recipe-media">
-        <img src="images/kartul3.jpg" alt="Praekartulid sibulaga">
-      </figure>
+        <figure class="recipe__media">
+          <img src="images/recipe4.jpg" alt="Praekartulid sibulaga">
+        </figure>
+      </div>
     </article>
 
-    <!-- LIFE HACKS -->
-    <section class="lifehacks">
-      <h2 class="section-title">Life hacks</h2>
+    <!-- ============== RETSEPT 5 ============== -->
+    <article class="recipe">
+      <div class="recipe__grid">
+        <div class="recipe__left">
+          <section class="box titlebox">
+            <h2 class="heading">Klassikalised friikartulid</h2>
+            <p class="lead">Kaks korda praetud = eriti krõbe serv, kohev seest.</p>
+          </section>
 
-      <div class="hack-grid">
+          <section class="box ingredients">
+            <h3 class="subheading">Koostisosad</h3>
+            <ul class="list">
+              <li>Tärkliserikkad kartulid</li>
+              <li>Õli fritüürimiseks</li>
+              <li>Sool</li>
+            </ul>
+          </section>
+
+          <section class="box method">
+            <h3 class="subheading">Valmistamine</h3>
+            <ol class="list">
+              <li>Lõika pulkadeks, leota külmas vees.</li>
+              <li>Esimene praad 150–160 °C (5–6 min).</li>
+              <li>Teine praad 180–190 °C (2–3 min).</li>
+            </ol>
+          </section>
+        </div>
+
+        <figure class="recipe__media">
+          <img src="images/recipe5.jpg" alt="Friikartulid">
+        </figure>
+      </div>
+    </article>
+
+    <!-- ============== RETSEPT 6 ============== -->
+    <article class="recipe">
+      <div class="recipe__grid">
+        <div class="recipe__left">
+          <section class="box titlebox">
+            <h2 class="heading">Kartulipudru pannkoogid</h2>
+            <p class="lead">Eilsest pudrust tänased krõbedad koogid – nullkulu.</p>
+          </section>
+
+          <section class="box ingredients">
+            <h3 class="subheading">Koostisosad</h3>
+            <ul class="list">
+              <li>2 tassi kartuliputru</li>
+              <li>1 muna</li>
+              <li>1–2 sl jahu</li>
+              <li>Sool, praadimiseks õli</li>
+            </ul>
+          </section>
+
+          <section class="box method">
+            <h3 class="subheading">Valmistamine</h3>
+            <ol class="list">
+              <li>Sega ained kokku.</li>
+              <li>Vormi lusikaga pätsid.</li>
+              <li>Prae mõlemalt poolt kuldseks.</li>
+            </ol>
+          </section>
+        </div>
+
+        <figure class="recipe__media">
+          <img src="images/recipe6.jpg" alt="Kartulipudru pannkoogid">
+        </figure>
+      </div>
+    </article>
+
+    <!-- ============== LIFE HACKS ============== -->
+    <section class="life">
+      <h2 class="life__title">Life hacks</h2>
+
+      <div class="life__grid">
+        <!-- 6 hack’i: 3 × 2 -->
         <article class="hack">
-          <div class="hack-text">
-            <h3 class="hack-title">Koori kartulid hetkega!</h3>
-            <p class="hack-caption">Keeda, siis tõmba koor käega maha – libiseb ise (ettevaatlik kuumusega).</p>
+          <img class="hack__img" src="images/hack1.jpg" alt="Koorimise nipp">
+          <div class="hack__text">
+            <h3>Koori hetkega</h3>
+            <p>Külmaveevann pärast keetmist – koor libiseb ise maha.</p>
           </div>
-          <img class="hack-img" src="images/hack1.jpg" alt="Koorimise nipp">
         </article>
 
         <article class="hack">
-          <div class="hack-text">
-            <h3 class="hack-title">Krõbedus võluvits</h3>
-            <p class="hack-caption">Leota friikaid enne praadimist 30–60 min külmas vees.</p>
+          <img class="hack__img" src="images/hack2.jpg" alt="Krõbeduse nipp">
+          <div class="hack__text">
+            <h3>Friikate krõbedus</h3>
+            <p>Leota 30–60 minutit, kuivata hoolikalt enne praadimist.</p>
           </div>
-          <img class="hack-img" src="images/hack2.jpg" alt="Friikate nipp">
         </article>
 
         <article class="hack">
-          <div class="hack-text">
-            <h3 class="hack-title">Maitse paremaks</h3>
-            <p class="hack-caption">Keetmisel lisa julgelt soola – maitse imbub sisse.</p>
+          <img class="hack__img" src="images/hack3.jpg" alt="Maitsestamise nipp">
+          <div class="hack__text">
+            <h3>Sool vette</h3>
+            <p>Keeduvee sool aitab maitsel mugulasse imbuda.</p>
           </div>
-          <img class="hack-img" src="images/hack3.jpg" alt="Maitsestamise nipp">
         </article>
 
         <article class="hack">
-          <div class="hack-text">
-            <h3 class="hack-title">Jääkpudrust koogid</h3>
-            <p class="hack-caption">Eilne puder = tänased pannkoogid. Nullkulu!</p>
+          <img class="hack__img" src="images/hack4.jpg" alt="Jäägi kasutus">
+          <div class="hack__text">
+            <h3>Pudrust koogid</h3>
+            <p>Jääkpuder + muna + jahu = mõnusad pannkoogid.</p>
           </div>
-          <img class="hack-img" src="images/hack4.jpg" alt="Pannkooginipp">
+        </article>
+
+        <article class="hack">
+          <img class="hack__img" src="images/hack5.jpg" alt="Ahjukartuli nipp">
+          <div class="hack__text">
+            <h3>Viilkartuli trikk</h3>
+            <p>Lõika peaaegu läbi – saab krõbeda hasselbacki.</p>
+          </div>
+        </article>
+
+        <article class="hack">
+          <img class="hack__img" src="images/hack6.jpg" alt="Säilituse nipp">
+          <div class="hack__text">
+            <h3>Säilita pimedas</h3>
+            <p>Hoia jahedas, valguse eest – vältid rohetumist.</p>
+          </div>
         </article>
       </div>
     </section>
