@@ -72,41 +72,11 @@ body{
 }
 
 /* Alumine kahe veeru ruut (koostisosad + valmistamine) */
-.recipe__left{
-  grid-template-areas:
-    "title"
-    "rows";
-}
-.titlebox{grid-area:title}
-.ingredients, .method{
-  /* paigutame need kahele veerule */
-}
-.recipe__left{
-  /* lisaruudustik allosas */
-}
-.recipe__left > .ingredients,
-.recipe__left > .method{
-  /* all olev 2 veergu */
-}
-@supports(display:grid){
-  .recipe__left{
-    grid-template-rows: auto auto;
-  }
-  .recipe__left::after{content:"";display:block;height:0}
-  .ingredients, .method{
-    /* ritta kahele veerule */
-  }
-  .recipe__left{
-    /* eraldi grid alumistele kastidele */
-  }
-}
+/* Removed redundant empty rules; actual layout for .recipe__left, .ingredients and .method
+   is declared further down in the file. */
 
 /* Lihtsam lahendus: määrame alumistele kastidele wrapperi kaudu kaheveerulise grid’i */
-.recipe__left{
-  /* lisakonteiner pealkirja järel */
-}
-.recipe__left > .ingredients,
-.recipe__left > .method{}
+/* Empty rulesets removed; actual layout for .recipe__left, .ingredients and .method is declared further down in the file. */
 
 /* Kuna pealkirjakast on eraldi, teeme teise ruudustiku */
 .recipe__left{
