@@ -1,238 +1,157 @@
-<!DOCTYPE html>
-<html lang="et">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retseptid – Kartulid</title>
+/* Värvid ja tüpograafia */
+:root{
+  --y:#FFC800;    /* kollane */
+  --yl:#FFF4AC;   /* helekollane */
+  --fg:#000;      /* must tekst */
 
-  <!-- Google Fonts: Bricolage Grotesque -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..72,300;12..72,400;12..72,600;12..72,800&display=swap" rel="stylesheet">
+  --fs-title:80px; /* pealkiri */
+  --fs-mid:50px;   /* keskmine */
+  --fs-sm:30px;    /* väiksem */
+  --fs-cap:25px;   /* alltekst */
+  --fs-btn:35px;   /* nupp */
 
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="title">Retseptid</h1>
-      <div class="chef-emoji" aria-hidden="true">👨‍🍳</div>
-      <nav class="top-actions" aria-label="Kiirlingid">
-        <a class="btn" href="#keedetud">Keedetud</a>
-        <a class="btn" href="#praekartul-peekon">Praekartul + peekon</a>
-        <a class="btn" href="#praekartul-sibul">Praekartul + sibul</a>
-        <a class="btn" href="#friikad">Friikad</a>
-        <a class="btn" href="#pannkoogid">Pudrupannkoogid</a>
-        <a class="btn" href="#mikro">Mikrokartul</a>
-      </nav>
-    </div>
-  </header>
+  --radius:25%;
+  --shadow:0 10px 24px rgba(0,0,0,.08);
+}
 
-  <main class="container page">
-    <!-- Keedetud kartulid tilliga -->
-    <section id="keedetud" class="recipe card card--panel">
-      <div class="recipe__content">
-        <h2 class="heading heading--xl">🌿 Keedetud kartulid tilliga</h2>
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--fg);
+  background:#fff; /* valge taust */
+  line-height:1.45;
+}
 
-        <div class="recipe__grid">
-          <div class="box box--accent">
-            <h3 class="heading heading--lg">Koostisosad</h3>
-            <ul class="list">
-              <li>Kartulid</li>
-              <li>Till</li>
-              <li>Natuke võid või õli</li>
-              <li>Sool</li>
-            </ul>
-          </div>
+.container{width:min(1100px,100%);margin-inline:auto;padding-inline:16px}
 
-          <div class="box">
-            <h3 class="heading heading--lg">Valmistamine</h3>
-            <ol class="list list--steps">
-              <li>Keeda kartulid soolaga.</li>
-              <li>Lisa hakitud till ja võitükk.</li>
-              <li>Sega õrnalt läbi.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
+/* Header */
+.site-header{
+  background:var(--yl);
+  box-shadow:var(--shadow);
+}
+.header-row{
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  gap:18px;
+  align-items:center;
+  padding-block:14px;
+}
+.page-title{
+  font-size:var(--fs-title);
+  margin:0;
+}
+.mascot{font-size:64px}
+.top-nav{display:flex;gap:12px;align-items:center}
+.top-link{
+  font-size:var(--fs-sm);
+  text-decoration:none;
+  color:var(--fg);
+  opacity:.8;
+}
+.btn{
+  font-size:var(--fs-btn);
+  background:var(--y);
+  color:var(--fg);
+  text-decoration:none;
+  padding:6px 16px;
+  border-radius:var(--radius);
+  border:3px solid #00000010;
+  box-shadow:var(--shadow);
+}
 
-    <!-- Praekartulid peekoniga -->
-    <section id="praekartul-peekon" class="recipe card card--panel">
-      <div class="recipe__content">
-        <h2 class="heading heading--xl">🥓 Praekartulid peekoniga</h2>
+/* Üldised komponendid */
+.section-title{font-size:var(--fs-mid);margin:14px 0}
+.caption{font-size:var(--fs-cap)}
 
-        <div class="recipe__grid">
-          <div class="box box--accent">
-            <h3 class="heading heading--lg">Koostisosad</h3>
-            <ul class="list">
-              <li>Keedetud kartulid</li>
-              <li>Peekon</li>
-              <li>Sool</li>
-            </ul>
-          </div>
+/* Retseptikaardid */
+.recipe-card{
+  display:grid;
+  grid-template-columns: 1.25fr .9fr;
+  gap:18px;
+  background:var(--yl);
+  border-radius:var(--radius);
+  padding:18px;
+  margin:20px 0;
+  box-shadow:var(--shadow);
+}
+.recipe-left{display:flex;flex-direction:column;gap:12px}
+.recipe-title{font-size:var(--fs-mid);margin:0}
+.lead{font-size:var(--fs-sm);margin:0 0 6px}
 
-          <div class="box">
-            <h3 class="heading heading--lg">Valmistamine</h3>
-            <ol class="list list--steps">
-              <li>Prae peekon pannil krõbedaks.</li>
-              <li>Lisa tükeldatud kartulid ja prae koos kuldseks.</li>
-              <li>Vajadusel lisa veidi soola.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
+.cols-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.box{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:12px 14px;
+  box-shadow:var(--shadow);
+}
+.box.accent{background:var(--y)}
+.box-title{font-size:var(--fs-sm);margin:0 0 6px}
+.list{margin:0;padding-left:1.1em;font-size:var(--fs-cap)}
+.recipe-media{
+  display:block;
+  margin:0;
+  border-radius:var(--radius);
+  overflow:hidden;
+  outline:6px solid #1e90ff; /* sinine raam nagu pildil */
+}
+.recipe-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
-    <!-- Praekartulid sibulaga -->
-    <section id="praekartul-sibul" class="recipe card card--panel">
-      <div class="recipe__content">
-        <h2 class="heading heading--xl">🧅 Praekartulid sibulaga</h2>
+/* Life hacks */
+.lifehacks{
+  background:var(--yl);
+  border-radius:var(--radius);
+  padding:18px;
+  margin:28px 0 40px;
+  box-shadow:var(--shadow);
+}
+.hack-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.hack{
+  background:var(--y);
+  border-radius:var(--radius);
+  display:grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap:10px;
+  padding:12px;
+  box-shadow:var(--shadow);
+}
+.hack-title{font-size:var(--fs-sm);margin:0 0 6px}
+.hack-caption{font-size:var(--fs-cap);margin:0}
+.hack-img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:var(--radius);
+  background:#fff;
+}
 
-        <div class="recipe__grid">
-          <div class="box box--accent">
-            <h3 class="heading heading--lg">Koostisosad</h3>
-            <ul class="list">
-              <li>Keedetud kartulid</li>
-              <li>Sibul</li>
-              <li>Õli või rasv</li>
-              <li>Sool</li>
-            </ul>
-          </div>
+/* Jalus */
+.footer{
+  background:var(--yl);
+  text-align:center;
+  padding:14px 0 22px;
+}
 
-        <div class="box">
-          <h3 class="heading heading--lg">Valmistamine</h3>
-          <ol class="list list--steps">
-            <li>Viiluta keedetud kartulid ja sibul.</li>
-            <li>Prae sibul kuldseks.</li>
-            <li>Lisa kartulid ja prae kõik koos krõbedaks.</li>
-            <li>Maitsesta soolaga.</li>
-          </ol>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Friikartulid (koostisosad + eraldi valmistamise plokk) -->
-    <section id="friikad" class="recipe card card--panel">
-      <div class="recipe__content">
-        <h2 class="heading heading--xl">🥔 Klassikalised friikartulid</h2>
-
-        <div class="recipe__grid">
-          <div class="box box--accent">
-            <h3 class="heading heading--lg">Koostisosad</h3>
-            <ul class="list">
-              <li>Kartulid (parimad on tärkliserikkad sordid, nt “Laura” või “Russet”)</li>
-              <li>Õli (päevalilleõli, rapsiõli või fritüüriõli)</li>
-              <li>Sool</li>
-            </ul>
-          </div>
-
-          <div class="box">
-            <h3 class="heading heading--lg">Friikartulite valmistamine</h3>
-            <ol class="list list--steps">
-              <li>Lõika kartulid pulkadeks.</li>
-              <li>Leota külmas vees 30–60 minutit.</li>
-              <li>Kuivata korralikult.</li>
-              <li>Prae õlis 150–160 °C juures 5–6 minutit (et pehmeneksid).</li>
-              <li>Tõsta välja ja lase jahtuda.</li>
-              <li>Prae uuesti 180–190 °C juures 2–3 minutit (et krõbedaks saaks).</li>
-              <li>Nõruta ja soolasta.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kartulipudru pannkoogid -->
-    <section id="pannkoogid" class="recipe card card--panel">
-      <div class="recipe__content">
-        <h2 class="heading heading--xl">🥞 Kartulipudru pannkoogid</h2>
-
-        <div class="recipe__grid">
-          <div class="box box--accent">
-            <h3 class="heading heading--lg">Koostisosad</h3>
-            <ul class="list">
-              <li>Umbes 2 tassi kartuliputru (külm või soe, vahet pole)</li>
-              <li>1 muna (aitab koos püsida)</li>
-              <li>1–2 sl jahu (või tärklist, kui tahad gluteenivaba)</li>
-              <li>Natuke soola (kui puder oli mage)</li>
-              <li>Praadimiseks õli või võid</li>
-            </ul>
-          </div>
-
-          <div class="box">
-            <h3 class="heading heading--lg">Valmistamine</h3>
-            <ol class="list list--steps">
-              <li>Sega kokku kartulipuder, muna ja jahu. Kui mass on liiga vedel, lisa veidi jahu juurde.</li>
-              <li>Vormi lusikaga väikesed pätsikesed või lapikud koogid.</li>
-              <li>Prae keskmisel kuumusel mõlemalt poolt kuldseks (umbes 2–3 minutit külg).</li>
-              <li>Serveeri soovi korral hapukoore, võitüki või praemunaga.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mikrolaineahju kartul -->
-    <section id="mikro" class="recipe card card--panel">
-      <div class="recipe__content">
-        <h2 class="heading heading--xl">🤪 Mikrolaineahju kartul</h2>
-
-        <div class="recipe__grid">
-          <div class="box box--accent">
-            <h3 class="heading heading--lg">Koostisosad</h3>
-            <ul class="list">
-              <li>1 kartul</li>
-              <li>Mikroahi</li>
-              <li>Veidi soola</li>
-            </ul>
-          </div>
-
-          <div class="box">
-            <h3 class="heading heading--lg">Valmistamine</h3>
-            <ol class="list list--steps">
-              <li>Torka kahvliga augud kartulisse.</li>
-              <li>Pane mikrosse 4–5 minutiks.</li>
-              <li>Lisa soola ja söö uhkelt – sa tegid sooja toidu!</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Life hacks plokk (soovi korral) -->
-    <section class="lifehacks card">
-      <h2 class="heading heading--xl">Life hacks</h2>
-      <div class="gallery">
-        <article class="tip box box--accent">
-          <h3 class="heading heading--md">Koori kartulid hetkega!</h3>
-          <p class="caption">Keeda, siis tõmba koor käega maha – libiseb ise.</p>
-        </article>
-        <article class="tip box box--accent">
-          <h3 class="heading heading--md">Krõbedus võluvits</h3>
-          <p class="caption">Leota friikartuleid enne praadimist külmas vees.</p>
-        </article>
-        <article class="tip box box--accent">
-          <h3 class="heading heading--md">Maitse paremaks</h3>
-          <p class="caption">Keetmisel lisa rohke sool – maitse imbub sisse.</p>
-        </article>
-        <article class="tip box box--accent">
-          <h3 class="heading heading--md">Jääkpudrust koogid</h3>
-          <p class="caption">Eilne puder = tänased pannkoogid. Nullkulu!</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p class="caption">© <span id="year"></span> Kartuliprojekt</p>
-    </div>
-    <script>
-      // ainult aasta jalusesse (JS pole nõutud, aga mugav)
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
-</body>
-</html>
+/* Mobiilikohandus */
+@media (max-width: 920px){
+  .header-row{grid-template-columns:1fr auto;grid-auto-flow:row}
+  .mascot{order:3}
+  .recipe-card{grid-template-columns:1fr}
+  .cols-2{grid-template-columns:1fr}
+  .hack-grid{grid-template-columns:1fr}
+}
