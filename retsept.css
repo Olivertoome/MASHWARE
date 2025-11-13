@@ -140,3 +140,30 @@ body{
   .recipe__left{grid-template-columns:1fr}
   .ingredients, .method{grid-column:1}
 }
+
+.main-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  background: var(--y); /* kollane nupp */
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: var(--fs-btn, 20px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav-link:hover {
+  background: var(--yl);
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  background: #fff4ac;
+  border: 2px solid #000;
+}
