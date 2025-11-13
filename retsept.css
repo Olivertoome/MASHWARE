@@ -1,8 +1,180 @@
-body {
-  background-color: lightblue;
+/* =========================================================
+   Kartuliretseptide leht
+   Värvid, font ja scale vastavalt juhistele
+   ========================================================= */
+:root{
+  --bg: #ffffff;       /* valge taust */
+  --y: #FFC800;        /* kollane */
+  --yl: #FFF4AC;       /* helekollane */
+  --fg: #000000;       /* must tekst */
+
+  /* tüpograafia vastavalt: Title 80, Keskmine 50, Väiksem 30, Alltekst 25, Nupud 35 */
+  --fs-title: 80px;
+  --fs-xl: 50px;
+  --fs-md: 30px;
+  --fs-sm: 25px;
+  --fs-btn: 35px;
+
+  --radius: 25%;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
 }
 
-h1 {
-  color: rgb(238, 22, 22);
-  text-align: center;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--fg);
+  background:var(--bg);
+  line-height:1.45;
+}
+
+.container{
+  width:min(1100px, 100%);
+  margin-inline:auto;
+  padding-inline:16px;
+}
+
+/* --------------------------------- Header */
+.site-header{
+  background: var(--yl);
+  box-shadow: var(--shadow);
+}
+.header-inner{
+  display:grid;
+  grid-template-columns:auto 60px 1fr;
+  gap:16px;
+  align-items:center;
+  padding:16px 0;
+}
+.title{
+  font-size:var(--fs-title);
+  margin:0;
+}
+.chef-emoji{
+  font-size: clamp(48px, 7vw, 72px);
+  text-align:center;
+}
+.top-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:flex-end;
+}
+
+/* --------------------------------- Buttons */
+.btn{
+  display:inline-block;
+  font-size:var(--fs-btn);
+  text-decoration:none;
+  color:var(--fg);
+  background:var(--y);
+  padding:10px 18px;
+  border-radius:var(--radius);
+  border:3px solid #00000010;
+  box-shadow: var(--shadow);
+  transition: transform .06s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+/* --------------------------------- Headings */
+.heading{ margin:0 0 10px 0; }
+.heading--xl{ font-size: var(--fs-xl); }
+.heading--lg{ font-size: var(--fs-md); }
+.heading--md{ font-size: var(--fs-md); font-weight:600; }
+.caption{ font-size: var(--fs-sm); opacity:.9; }
+
+/* --------------------------------- Cards / boxes */
+.card{
+  background:var(--yl);
+  border-radius: var(--radius);
+  padding:20px;
+  box-shadow: var(--shadow);
+  margin-block: 22px;
+}
+.card--panel{
+  background: var(--yl);
+}
+.box{
+  background:#fff;
+  border-radius: var(--radius);
+  padding:16px 18px;
+  box-shadow: var(--shadow);
+}
+.box--accent{
+  background: var(--y);
+}
+
+/* --------------------------------- Recipe layout */
+.page{ padding-block: 20px 60px; }
+
+.recipe__content{
+  background:var(--yl);
+  border-radius:var(--radius);
+}
+
+.recipe__grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+}
+
+/* listid */
+.list{
+  margin:0;
+  padding-left: 1.1em;
+  font-size: var(--fs-md);
+}
+.list--steps{
+  list-style: decimal;
+}
+
+/* Life hacks */
+.lifehacks{
+  background: var(--yl);
+}
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:16px;
+}
+.tip .caption{ margin:0; }
+
+/* --------------------------------- Footer */
+.site-footer{
+  background: var(--yl);
+  padding: 18px 0 26px;
+  text-align:center;
+}
+
+/* --------------------------------- Responsiivsus */
+@media (max-width: 1000px){
+  .header-inner{
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap:10px;
+  }
+  .top-actions{
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 820px){
+  .recipe__grid{
+    grid-template-columns: 1fr;
+  }
+  .gallery{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px){
+  :root{
+    --fs-title: 56px;
+    --fs-xl: 36px;
+    --fs-md: 24px;
+    --fs-sm: 18px;
+    --fs-btn: 24px;
+  }
+  .gallery{
+    grid-template-columns: 1fr;
+  }
 }
