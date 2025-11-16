@@ -27,7 +27,7 @@ ul.navbar li a {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
-  border-radius: 0;              /* eemaldame mullid */
+  border-radius: 0;              /* mullid */
   background: none;              /* ilma taustata */
   font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
