@@ -1,169 +1,319 @@
-:root{
-  --y:#FFC800;
-  --yl:#FFF4AC;
-  --fg:#000;
-
-  --fs-title:80px;  /* Title */
-  --fs-mid:50px;    /* Keskmine */
-  --fs-small:30px;  /* Väiksem */
-  --fs-cap:25px;    /* Alltekst */
-
-  --radius:25px;
-  --shadow:0 10px 24px rgba(0,0,0,.08);
+/* Globaalne kastimudel */
+* {
+  box-sizing: border-box;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:"Bricolage Grotesque",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  color:var(--fg);
-  background:#fff;
-  line-height:1.45;
+/* Kõrgus kogu lehele */
+html, body {
+  height: 100%;
 }
 
-.container{width:min(1100px,100%);margin-inline:auto;padding-inline:16px}
+/* Üldised body seaded */
+body {
+  margin: 0;
+  font-family: "Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  line-height: 1.45;
+}
+
+/* Pealkirjad ja tekstid – ERALDI reeglid, mitte body sees */
+h1 {
+  font-size: 80px;
+  color: black;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  color: black;
+}
+
+p {
+  font-size: 30px;
+  color: black;
+}
+
+.small-text {
+  font-size: 25px;
+}
+
+/* Kast, kus on ümarad nurgad ja vari */
+.card,
+.box,
+.pane {
+  border-radius: 25px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+/* KONTEINER */
+.container {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
 
 /* Ülaosa */
-.site-header{background:var(--yl);box-shadow:var(--shadow)}
-.head-row{display:flex;align-items:center;gap:16px;padding-block:12px}
-.page-title{margin:0;font-size:var(--fs-title)}
+.site-header {
+  background: #FFF4AC;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.head-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-block: 12px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 80px;
+}
 
 /* Üldised tekstiklassid */
-.heading{margin:0 0 6px;font-size:var(--fs-mid)}
-.subheading{margin:0 0 6px;font-size:var(--fs-small)}
-.lead{font-size:var(--fs-small);margin:0 0 8px}
-.caption{font-size:var(--fs-cap);margin:0}
+.heading {
+  margin: 0 0 6px;
+  font-size: 50px;
+}
+
+.subheading {
+  margin: 0 0 6px;
+  font-size: 30px;
+}
+
+.lead {
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.caption {
+  font-size: 25px;
+  margin: 0;
+}
 
 /* ====== RETSEPTIKAART ====== */
-.recipe{
-  background:var(--yl);             /* FFF4AC suur kast */
-  border-radius:20px;               /* suur kast võib olla pehmem */
-  padding:18px;                     /* vahe, mis jääb helekollaseks */
-  margin:20px 0;
-  box-shadow:var(--shadow);
+.recipe {
+  background: #FFF4AC;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
 }
-.recipe__grid{
-  display:grid;
-  grid-template-columns: 1.4fr 0.9fr; /* vasakul tekstiplokid, paremal pilt */
-  gap:18px;                           /* vahe jääb helekollane */
-  align-items:stretch;
+
+.recipe__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 18px;
+  align-items: stretch;
 }
-.recipe__left{
-  display:grid;
-  grid-template-rows:auto 1fr;        /* ülemine pealkirjakast, all kaks kasti */
-  gap:18px;                           /* helekollane vahe */
+
+.recipe__left {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 18px;
 }
-.recipe__media{
-  margin:0;border-radius:16px;overflow:hidden;background:#fff
+
+.recipe__media {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
 }
-.recipe__media img{width:100%;height:100%;object-fit:cover;display:block}
+
+.recipe__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* Kollased sisemised kastid */
-.box{
-  background:var(--y);                /* FFC800 */
-  border-radius:var(--radius);        /* 25% nurk */
-  padding:14px 16px;
-  box-shadow:var(--shadow);
-}
-.titlebox{align-self:start}
-.ingredients, .method{
-  min-height:140px;
+.box {
+  background: #FFC800;
+  border-radius: 25px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
 }
 
-/* Alumine kahe veeru ruut (koostisosad + valmistamine) */
-/* Removed redundant empty rules; actual layout for .recipe__left, .ingredients and .method
-   is declared further down in the file. */
+.titlebox {
+  align-self: start;
+}
 
-/* Lihtsam lahendus: määrame alumistele kastidele wrapperi kaudu kaheveerulise grid’i */
-/* Empty rulesets removed; actual layout for .recipe__left, .ingredients and .method is declared further down in the file. */
+.ingredients,
+.method {
+  min-height: 140px;
+}
 
-/* Kuna pealkirjakast on eraldi, teeme teise ruudustiku */
-.recipe__left{
-  display:grid;
+/* Paigutus: pealkiri üleval, all kaks kasti kõrvuti */
+.recipe__left {
+  display: grid;
   grid-template-rows: auto auto;
 }
+
 .recipe__left > .ingredients,
-.recipe__left > .method{
+.recipe__left > .method {
   grid-row: 2;
 }
-.recipe__left{
+
+.recipe__left {
   grid-template-columns: 1fr 1fr;
 }
-.titlebox{
-  grid-column: 1 / -1; /* üle kahe veeru */
+
+.titlebox {
+  grid-column: 1 / -1;
 }
-.ingredients{grid-column:1}
-.method{grid-column:2}
+
+.ingredients {
+  grid-column: 1;
+}
+
+.method {
+  grid-column: 2;
+}
 
 /* ====== LIFE HACKS ====== */
-.life{
-  background:var(--yl);              /* suur helekollane kast */
-  border-radius:20px;
-  padding:18px;
-  margin:34px 0 50px;
-  box-shadow:var(--shadow);
+.life {
+  background: #FFF4AC;
+  border-radius: 20px;
+  padding: 18px;
+  margin: 34px 0 50px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
 }
-.life__title{font-size:var(--fs-mid);margin:0 0 12px}
-.life__grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;     /* 3 × 2 (2 veergu, 3 rida) */
-  gap:18px;
+
+.life__title {
+  font-size: 50px;
+  margin: 0 0 12px;
 }
-.hack{
-  background:var(--y);               /* iga hack on kollases kastis */
-  border-radius:var(--radius);       /* 25% */
-  box-shadow:var(--shadow);
-  display:grid;
-  grid-template-columns: 0.9fr 1.1fr;/* vasakul pilt, paremal tekst */
-  gap:12px;
-  padding:12px;
+
+.life__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
-.hack__img{
-  width:100%;height:100%;object-fit:cover;border-radius:var(--radius);background:#fff
+
+.hack {
+  background: #FFC800;
+  border-radius: 25px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 12px;
+  padding: 12px;
 }
-.hack__text h3{font-size:var(--fs-small);margin:0 0 6px}
-.hack__text p{font-size:var(--fs-cap);margin:0}
+
+.hack__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  background: #fff;
+}
+
+.hack__text h3 {
+  font-size: 30px;
+  margin: 0 0 6px;
+}
+
+.hack__text p {
+  font-size: 25px;
+  margin: 0;
+}
 
 /* Responsiivsus */
-@media (max-width: 980px){
-  .recipe__grid{grid-template-columns:1fr}
-}
-@media (max-width: 700px){
-  :root{
-    --fs-title:56px;
-    --fs-mid:36px;
-    --fs-small:24px;
-    --fs-cap:18px;
+@media (max-width: 980px) {
+  .recipe__grid {
+    grid-template-columns: 1fr;
   }
-  .life__grid{grid-template-columns:1fr}
-  .recipe__left{grid-template-columns:1fr}
-  .ingredients, .method{grid-column:1}
 }
 
+@media (max-width: 700px) {
+  /* väiksemad fondid väikestel ekraanidel */
+  .page-title {
+    font-size: 56px;
+  }
+
+  .life__title,
+  .heading {
+    font-size: 36px;
+  }
+
+  .subheading,
+  .lead,
+  .hack__text h3 {
+    font-size: 24px;
+  }
+
+  .caption,
+  .hack__text p,
+  .small-text {
+    font-size: 18px;
+  }
+
+  .life__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe__left {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredients,
+  .method {
+    grid-column: 1;
+  }
+}
+
+/* NAVIGEERIMINE */
 .main-nav {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
+.main-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;   /* paneb nupud keskele */
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+
 .nav-link {
   text-decoration: none;
   color: #000;
-  background: var(--y); /* kollane nupp */
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: var(--fs-btn, 20px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: background 0.2s, transform 0.2s;
+  background: #FFC800;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 0 #d4a600;
+  border: 1px solid #00000010;
+  position: relative;
+  top: 0;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    top 0.15s ease;
 }
 
+/* Hover – nupp “vajub veidi alla” */
 .nav-link:hover {
-  background: var(--yl);
-  transform: scale(1.05);
+  background: #FFF4AC;
+  transform: translateY(1px) scale(1.02);
+  top: 1px;
+  box-shadow: 0 2px 0 #b38a00;
 }
 
+/* Aktiivne leht (näiteks see kus praegu oled) */
 .nav-link.active {
-  background: #fff4ac;
+  background: #fff;
   border: 2px solid #000;
+  box-shadow: 0 3px 0 #b38a00;
 }
