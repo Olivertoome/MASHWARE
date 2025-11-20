@@ -33,23 +33,16 @@ ul.navbar li a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* hover = kollane taust + must tekst */
-ul.navbar li a:hover {
-  background-color: #FFC800;
-  color: #000;
-}
-
-/* vajutatud = jääb tume */
-ul.navbar li a:active {
-  background-color: #111;
-  color: #fff;
-}
-
 * { box-sizing: border-box; }
 
 html, body {
   margin: 0;
   padding: 0;
+}
+
+.main-wrapper {
+  max-width: 900px;
+  padding: 0 16px;
 }
 
 /* valge ülemine riba */
@@ -134,7 +127,7 @@ a{
   display: block;
   text-decoration: none;
   color: #ffffff;
-  background: #ffffff;
+  background: #000000;
   padding: 10px 12px;
   border-radius: 25px;
   margin: 8px 0;
