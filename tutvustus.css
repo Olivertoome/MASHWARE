@@ -122,18 +122,26 @@ img{
   box-shadow: 0 4px 16px rgba(0,0,0,.08);
 }
 
+.sort {
+  max-width: 300px;    
+  height: 200px;
+  margin: 12px auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* allikad */
 a{
   display: block;
   text-decoration: none;
-  color: #ffffff;
-  background: #000000;
+  color: #000000;
+  background: none;
   padding: 10px 12px;
   border-radius: 25px;
   margin: 8px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,.05);
 }
-a:hover{ background: #000000; }
+
 
 @media screen and (max-width: 700px){
   h1{ font-size: 38px; }
