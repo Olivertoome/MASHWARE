@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.page-title {
+  margin: 0;
+  font-size: 80px;
+}
+
 .main-nav {
   display: flex;
   gap: 12px;
