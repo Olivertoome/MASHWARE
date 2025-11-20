@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+h1 {
+  font-size: 80px;
+  color: black;
+  text-align: center;
+}
+
 .page-title {
   margin: 0;
   font-size: 80px;
