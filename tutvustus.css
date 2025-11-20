@@ -83,6 +83,10 @@ html, body {
   margin: 0;
 }
 
+.hero-content {
+  text-align: center;
+}
+
 body{
   margin: 0 auto;
   max-width: 980px;
