@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: "Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -30,14 +26,8 @@ p {
   color: black;
 }
 
-.small-text {
-  font-size: 25px;
-}
-
 /* Kast, kus on ümarad nurgad */
-.card,
-.box,
-.pane {
+.box {
   border-radius: 25px;
   box-shadow: 0 10px 24px rgba(0,0,0,.08);
   padding: 20px;
