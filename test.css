@@ -1,32 +1,32 @@
-/* põhi */
+
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap');
 
 ul.navbar {
-  list-style-type: none;        /* eemaldab punktid listi eest */
-  margin: 0;                    /* eemaldab vaikimisi välisvahe */
-  padding: 0 40px;              /* lisab 40px vahe servadesse */
-  background-color: #333333;    /* must taust */
-  width: 100vw;                 /* võtab kogu ekraani laiuse */
-  margin-left: calc(-50vw + 50%); /* nihutab elemendi, et ta ulatuks servast servani */
-  display: flex;                /* seab elemendid reas */
-  justify-content: flex-end;    /* seab menüü nupud paremale */
-  align-items: center;          /* keskendab need vertikaalselt */
-  height: 60px;                 /* riba kõrgus */
+  list-style-type: none;        
+  margin: 0;                    
+  padding: 0 40px;              
+  background-color: #333333;    
+  width: 100vw;                 
+  margin-left: calc(-50vw + 50%); 
+  display: flex;                
+  justify-content: flex-end;    
+  align-items: center;          
+  height: 60px;                 
 }
 
-/* menüülingid */
+
 ul.navbar li {
   margin-left: 10px;
 }
 
 ul.navbar li a {
   display: block;
-  color: #ffffff;                /* valge tekst */
+  color: #ffffff;                
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
-  border-radius: 0;              /* mullid */
-  background: none;              /* ilma taustata */
+  border-radius: 0;              
+  background: none;              
   font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -43,7 +43,7 @@ html, body {
   padding: 0 16px;
 }
 
-/* valge ülemine riba */
+
 .hero-full {
   width: 100vw;
   background-color: #ffffff;
