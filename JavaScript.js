@@ -1,4 +1,4 @@
-document.querySelectorAll(".nav-link").forEach(link => {
+document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("mouseenter", () => {
     let colors = ["#ff0000", "#00ff00", "#0000ff", "#ff00ff"];
     let i = 0;
@@ -15,7 +15,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
   });
 });
 
-document.querySelectorAll(".nav-link").forEach(link => {
+document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("mousemove", e => {
     const rect = link.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -29,7 +29,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
   });
 });
 
-document.querySelectorAll(".nav-link").forEach(link => {
+document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("mouseenter", () => {
     const original = getComputedStyle(link).boxShadow;
 
@@ -48,7 +48,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
   });
 });
 
-document.querySelectorAll(".nav-link").forEach(link => {
+document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("mouseenter", () => {
     link.style.transition = "transform 0.15s ease";
     link.style.transform = "translateY(-8px) rotate(3deg)";
