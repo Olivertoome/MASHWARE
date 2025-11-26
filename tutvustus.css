@@ -6,17 +6,17 @@ h3{ font-size: 22px; font-weight: 700; margin: 20px 0 8px; }
 h3{
   line-height: 1.6;
   margin: 10px 0 14px;
-  background: #FFC800;     /* tumekollane kast */
+  background: #FFC800;     
   padding: 14px 16px;
-  border-radius: 25px;     /* ümar nurk */
+  border-radius: 25px;     
 }
 
 p{
   line-height: 1.6;
   margin: 10px 0 14px;
-  background: #FFC800;     /* tumekollane kast */
+  background: #FFC800;    
   padding: 14px 16px;
-  border-radius: 25px;     /* ümar nurk */
+  border-radius: 25px;     
 }
 
 img{
