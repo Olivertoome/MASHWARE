@@ -1,299 +1,365 @@
 <!DOCTYPE html>
 <html lang="et">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Retseptid</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mashwere – Retseptid</title>
 
-  <!-- Bricolage Grotesque -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..72,400;12..72,700&display=swap" rel="stylesheet">
+    <!-- Bricolage Grotesque -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..72,400;12..72,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="retsept.css" />
-  <link rel="stylesheet" href="ühine.css" />
-</head>
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="retsept.css" />
+  </head>
 
-<body>
-<nav class="site-header">
-  <div class="container head-row">
-    <h1 class="page-title">Mashware</h1>
-    <nav class="main-nav">
-      <a href="tutvustus.html" class="nav-link">Avaleht</a>
-      <a href="retsept.html" class="nav-link active">Retseptid</a>
-      <a href="küsitlus.html" class="nav-link">Küsitlus</a>
-    </nav>
-  </div>
-</nav>
-  <main class="container page">
-    <!--RETSEPT 1-->
-    <article class="retsept">
-      <div class="recipe__grid">
-        <div class="recipe__left">
-          <section class="box titlebox">
-            <h2 class="heading">Mikrolaineahju kartul</h2>
-            <p class="lead">Superkiire soolane amps – plahvatuslikult lihtne näljakustutaja.</p>
-          </section>
+  <body>
+    <ul class="navbar">
+      <li><a href="tutvustus.html">Kartuli ajalugu ja sordid</a></li>
+      <li><a href="retsept.html" class="active">Retseptid</a></li>
+      <li><a href="küsitlus.html">Quiz ja uudised</a></li>
+    </ul>
 
-          <section class="box ingredients">
-            <h3 class="subheading">Koostisosad</h3>
-            <ul class="list">
-              <li>1 suur kartul</li>
-              <li>Veidi soola</li>
-              <li>Võitükk (soovi korral)</li>
-            </ul>
-          </section>
-
-          <section class="box method">
-            <h3 class="subheading">Valmistamine</h3>
-            <ol class="list">
-              <li>Torka kahvliga augud kartulisse.</li>
-              <li>Mikro 4–5 minutit, kuni pehme.</li>
-              <li>Sool, võitükk – valmis!</li>
-            </ol>
-          </section>
-        </div>
-
-        <figure class="recipe__media">
-          <img src="/retsepti_pildid/mikro.avif" alt="Mikrolaineahju kartul">
-        </figure>
-      </div>
-    </article>
-
-    <!--RETSEPT 2-->
-    <article class="retsept">
-      <div class="recipe__grid">
-        <div class="recipe__left">
-          <section class="box titlebox">
-            <h2 class="heading">Keedetud kartulid tilliga</h2>
-            <p class="lead">Klassika: värske till ja õrnalt võine maitse.</p>
-          </section>
-
-          <section class="box ingredients">
-            <h3 class="subheading">Koostisosad</h3>
-            <ul class="list">
-              <li>Kartulid</li>
-              <li>Till</li>
-              <li>Või või õli, sool</li>
-            </ul>
-          </section>
-
-          <section class="box method">
-            <h3 class="subheading">Valmistamine</h3>
-            <ol class="list">
-              <li>Keeda soolases vees pehmeks.</li>
-              <li>Lisa hakitud till ja võitükk.</li>
-              <li>Sega õrnalt läbi.</li>
-            </ol>
-          </section>
-        </div>
-
-        <figure class="recipe__media">
-          <img src="/retsepti_pildid/retsept1.3.jpg" alt="Keedetud kartulid tilliga">
-        </figure>
-      </div>
-    </article>
-
-    <!--RETSEPT 3-->
-    <article class="retsept">
-      <div class="recipe__grid">
-        <div class="recipe__left">
-          <section class="box titlebox">
-            <h2 class="heading">Praekartulid peekoniga</h2>
-            <p class="lead">Krõbe peekon + kuldsed kartulid = õhtusöögi superstaar.</p>
-          </section>
-
-          <section class="box ingredients">
-            <h3 class="subheading">Koostisosad</h3>
-            <ul class="list">
-              <li>Keedetud kartulid</li>
-              <li>Peekon</li>
-              <li>Sool</li>
-            </ul>
-          </section>
-
-          <section class="box method">
-            <h3 class="subheading">Valmistamine</h3>
-            <ol class="list">
-              <li>Prae peekon krõbedaks.</li>
-              <li>Lisa tükeldatud kartulid.</li>
-              <li>Prae kuldseks, maitsesta.</li>
-            </ol>
-          </section>
-        </div>
-
-        <figure class="recipe__media">
-          <img src="/retsepti_pildid/PotatoesBacon6656MJ.jpg" alt="Praekartulid peekoniga">
-        </figure>
-      </div>
-    </article>
-
-    <!--RETSEPT 4-->
-    <article class="retsept">
-      <div class="recipe__grid">
-        <div class="recipe__left">
-          <section class="box titlebox">
-            <h2 class="heading">Praekartulid sibulaga</h2>
-            <p class="lead">Magus sibul ja krõbe kartul – lihtne võiduröögatus.</p>
-          </section>
-
-          <section class="box ingredients">
-            <h3 class="subheading">Koostisosad</h3>
-            <ul class="list">
-              <li>Keedetud kartulid</li>
-              <li>Sibul</li>
-              <li>Õli või rasv, sool</li>
-            </ul>
-          </section>
-
-          <section class="box method">
-            <h3 class="subheading">Valmistamine</h3>
-            <ol class="list">
-              <li>Viiluta kartul ja sibul.</li>
-              <li>Prae sibul kuldseks.</li>
-              <li>Lisa kartul, prae krõbedaks.</li>
-            </ol>
-          </section>
-        </div>
-
-        <figure class="recipe__media">
-          <img src="/retsepti_pildid/fried-potatoes-and-onions-2.2.jpg" alt="Praekartulid sibulaga">
-        </figure>
-      </div>
-    </article>
-
-    <!--RETSEPT 5-->
-    <article class="retsept">
-      <div class="recipe__grid">
-        <div class="recipe__left">
-          <section class="box titlebox">
-            <h2 class="heading">Klassikalised friikartulid</h2>
-            <p class="lead">Kaks korda praetud = eriti krõbe serv, kohev seest.</p>
-          </section>
-
-          <section class="box ingredients">
-            <h3 class="subheading">Koostisosad</h3>
-            <ul class="list">
-              <li>Tärkliserikkad kartulid</li>
-              <li>Õli fritüürimiseks</li>
-              <li>Sool</li>
-            </ul>
-          </section>
-
-          <section class="box method">
-            <h3 class="subheading">Valmistamine</h3>
-            <ol class="list">
-              <li>Lõika pulkadeks, leota külmas vees.</li>
-              <li>Esimene praad 150–160 °C (5–6 min).</li>
-              <li>Teine praad 180–190 °C (2–3 min).</li>
-            </ol>
-          </section>
-        </div>
-
-        <figure class="recipe__media">
-          <img src="/retsepti_pildid/whisper-of-yum-homemade-french-fries.webp" alt="Friikartulid">
-        </figure>
-      </div>
-    </article>
-
-    <!--RETSEPT 6-->
-    <article class="retsept">
-      <div class="recipe__grid">
-        <div class="recipe__left">
-          <section class="box titlebox">
-            <h2 class="heading">Kartulipudru pannkoogid</h2>
-            <p class="lead">Eilsest pudrust tänased krõbedad koogid – nullkulu.</p>
-          </section>
-
-          <section class="box ingredients">
-            <h3 class="subheading">Koostisosad</h3>
-            <ul class="list">
-              <li>2 tassi kartuliputru</li>
-              <li>1 muna</li>
-              <li>1–2 sl jahu</li>
-              <li>Sool, praadimiseks õli</li>
-            </ul>
-          </section>
-
-          <section class="box method">
-            <h3 class="subheading">Valmistamine</h3>
-            <ol class="list">
-              <li>Sega ained kokku.</li>
-              <li>Vormi lusikaga pätsid.</li>
-              <li>Prae mõlemalt poolt kuldseks.</li>
-            </ol>
-          </section>
-        </div>
-
-        <figure class="recipe__media">
-          <img src="/retsepti_pildid/mashed-potato-pancakes-2020.2.jpg" alt="Kartulipudru pannkoogid">
-        </figure>
-      </div>
-    </article>
-
-    <!--LIFE HACKS-->
-    <section class="life">
-      <h2 class="life__title">Life hacks</h2>
-
-      <div class="life__grid">
-        <!--6 hack’i-->
-        <article class="hack">
-          <img class="hack__img" src="/retsepti_pildid/LH1.1.avif" alt="Koorimise nipp">
-          <div class="hack__text">
-            <h3>Koori kartulid hetkega!</h3>
-            <p>Keeda neid koos koorega, siis tõmba lihtsalt koor kätega maha — nagu sokk jalast.</p>
-          </div>
-        </article>
-
-        <article class="hack">
-          <img class="hack__img" src="/retsepti_pildid/LH2.1.png" alt="Krõbeduse nipp">
-          <div class="hack__text">
-            <h3>Kartul päästab liiga soolase supi!</h3>
-            <p>Viska sisse kooritud kartul – imeb soola endasse nagu käsn.</p>
-          </div>
-        </article>
-
-        <article class="hack">
-          <img class="hack__img" src="/retsepti_pildid/LH3.1.jpg" alt="Maitsestamise nipp">
-          <div class="hack__text">
-            <h3>Külmad keedukartulid = homne friikaunistus</h3>
-            <p>Külmad kartulid praevad paremini kui värsked.</p>
-          </div>
-        </article>
-
-        <article class="hack">
-          <img class="hack__img" src="/retsepti_pildid/LH4.png" alt="Jäägi kasutus">
-          <div class="hack__text">
-            <h3>Tuleviku ennustamine</h3>
-            <p>Pane kartul padja alla, et unenäos näha tulevast kartulisaaki. (Töötab iga teise neljapäeva öösel, täiskuu ajal.)</p>
-          </div>
-        </article>
-
-        <article class="hack">
-          <img class="hack__img" src="/retsepti_pildid/LH5.png" alt="Ahjukartuli nipp">
-          <div class="hack__text">
-            <h3>Tühi kõht?</h3>
-            <p>Kui tunned end tühjana – söö kartul, tema täidab sind.</p>
-          </div>
-        </article>
-
-        <article class="hack">
-          <img class="hack__img" src="/retsepti_pildid/LH6.png" alt="Säilituse nipp">
-          <div class="hack__text">
-            <h3>Kartuli-turbo-laadija</h3>
-            <p>Torka kaks hambaorki kartulisse, kuumuta kartulit mikrolaineahjus 8 sekundit, ühenda telefon kartuliga – ja vaata, kuidas mitte midagi ei juhtu.</p>
-          </div>
-        </article>
+    <section class="hero-full">
+      <div class="hero-content">
+        <h1>Kartuliroad igaks tujuks!</h1>
+        <p>
+          Kiirest mikrokartulist krõbedate friikateni – kõik ühel maitsval
+          lehel.
+        </p>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="caption">© <span id="year"></span> Kartuliprojekt</p>
+    <div class="main-wrapper">
+      <main class="page">
+        <article class="retsept">
+          <div class="recipe__grid">
+            <div class="recipe__left">
+              <section class="box titlebox">
+                <h2 class="heading">Mikrolaineahju kartul</h2>
+                <p class="lead">
+                  Superkiire soolane amps – plahvatuslikult lihtne
+                  näljakustutaja.
+                </p>
+              </section>
+
+              <section class="box ingredients">
+                <h3 class="subheading">Koostisosad</h3>
+                <ul class="list">
+                  <li>1 suur kartul</li>
+                  <li>Veidi soola</li>
+                  <li>Võitükk (soovi korral)</li>
+                </ul>
+              </section>
+
+              <section class="box method">
+                <h3 class="subheading">Valmistamine</h3>
+                <ol class="list">
+                  <li>Torka kahvliga augud kartulisse.</li>
+                  <li>Mikro 4–5 minutit, kuni pehme.</li>
+                  <li>Sool, võitükk – valmis!</li>
+                </ol>
+              </section>
+            </div>
+
+            <figure class="recipe__media">
+              <img
+                src="/retsepti_pildid/mikro.avif"
+                alt="Mikrolaineahju kartul"
+              />
+            </figure>
+          </div>
+        </article>
+
+        <article class="retsept">
+          <div class="recipe__grid">
+            <div class="recipe__left">
+              <section class="box titlebox">
+                <h2 class="heading">Keedetud kartulid tilliga</h2>
+                <p class="lead">
+                  Klassika: värske till ja õrnalt võine maitse.
+                </p>
+              </section>
+
+              <section class="box ingredients">
+                <h3 class="subheading">Koostisosad</h3>
+                <ul class="list">
+                  <li>Kartulid</li>
+                  <li>Till</li>
+                  <li>Või või õli, sool</li>
+                </ul>
+              </section>
+
+              <section class="box method">
+                <h3 class="subheading">Valmistamine</h3>
+                <ol class="list">
+                  <li>Keeda soolases vees pehmeks.</li>
+                  <li>Lisa hakitud till ja võitükk.</li>
+                  <li>Sega õrnalt läbi.</li>
+                </ol>
+              </section>
+            </div>
+
+            <figure class="recipe__media">
+              <img
+                src="/retsepti_pildid/retsept1.3.jpg"
+                alt="Keedetud kartulid tilliga"
+              />
+            </figure>
+          </div>
+        </article>
+
+        <article class="retsept">
+          <div class="recipe__grid">
+            <div class="recipe__left">
+              <section class="box titlebox">
+                <h2 class="heading">Praekartulid peekoniga</h2>
+                <p class="lead">
+                  Krõbe peekon + kuldsed kartulid = õhtusöögi superstaar.
+                </p>
+              </section>
+
+              <section class="box ingredients">
+                <h3 class="subheading">Koostisosad</h3>
+                <ul class="list">
+                  <li>Keedetud kartulid</li>
+                  <li>Peekon</li>
+                  <li>Sool</li>
+                </ul>
+              </section>
+
+              <section class="box method">
+                <h3 class="subheading">Valmistamine</h3>
+                <ol class="list">
+                  <li>Prae peekon krõbedaks.</li>
+                  <li>Lisa tükeldatud kartulid.</li>
+                  <li>Prae kuldseks, maitsesta.</li>
+                </ol>
+              </section>
+            </div>
+
+            <figure class="recipe__media">
+              <img
+                src="/retsepti_pildid/PotatoesBacon6656MJ.jpg"
+                alt="Praekartulid peekoniga"
+              />
+            </figure>
+          </div>
+        </article>
+
+        <article class="retsept">
+          <div class="recipe__grid">
+            <div class="recipe__left">
+              <section class="box titlebox">
+                <h2 class="heading">Praekartulid sibulaga</h2>
+                <p class="lead">
+                  Magus sibul ja krõbe kartul – lihtne võiduröögatus.
+                </p>
+              </section>
+
+              <section class="box ingredients">
+                <h3 class="subheading">Koostisosad</h3>
+                <ul class="list">
+                  <li>Keedetud kartulid</li>
+                  <li>Sibul</li>
+                  <li>Õli või rasv, sool</li>
+                </ul>
+              </section>
+
+              <section class="box method">
+                <h3 class="subheading">Valmistamine</h3>
+                <ol class="list">
+                  <li>Viiluta kartul ja sibul.</li>
+                  <li>Prae sibul kuldseks.</li>
+                  <li>Lisa kartul, prae krõbedaks.</li>
+                </ol>
+              </section>
+            </div>
+
+            <figure class="recipe__media">
+              <img
+                src="/retsepti_pildid/fried-potatoes-and-onions-2.2.jpg"
+                alt="Praekartulid sibulaga"
+              />
+            </figure>
+          </div>
+        </article>
+
+        <article class="retsept">
+          <div class="recipe__grid">
+            <div class="recipe__left">
+              <section class="box titlebox">
+                <h2 class="heading">Klassikalised friikartulid</h2>
+                <p class="lead">
+                  Kaks korda praetud = eriti krõbe serv, kohev seest.
+                </p>
+              </section>
+
+              <section class="box ingredients">
+                <h3 class="subheading">Koostisosad</h3>
+                <ul class="list">
+                  <li>Tärkliserikkad kartulid</li>
+                  <li>Õli fritüürimiseks</li>
+                  <li>Sool</li>
+                </ul>
+              </section>
+
+              <section class="box method">
+                <h3 class="subheading">Valmistamine</h3>
+                <ol class="list">
+                  <li>Lõika pulkadeks, leota külmas vees.</li>
+                  <li>Esimene praad 150–160 °C (5–6 min).</li>
+                  <li>Teine praad 180–190 °C (2–3 min).</li>
+                </ol>
+              </section>
+            </div>
+
+            <figure class="recipe__media">
+              <img
+                src="/retsepti_pildid/whisper-of-yum-homemade-french-fries.webp"
+                alt="Friikartulid"
+              />
+            </figure>
+          </div>
+        </article>
+
+        <article class="retsept">
+          <div class="recipe__grid">
+            <div class="recipe__left">
+              <section class="box titlebox">
+                <h2 class="heading">Kartulipudru pannkoogid</h2>
+                <p class="lead">
+                  Eilsest pudrust tänased krõbedad koogid – nullkulu.
+                </p>
+              </section>
+
+              <section class="box ingredients">
+                <h3 class="subheading">Koostisosad</h3>
+                <ul class="list">
+                  <li>2 tassi kartuliputru</li>
+                  <li>1 muna</li>
+                  <li>1–2 sl jahu</li>
+                  <li>Sool, praadimiseks õli</li>
+                </ul>
+              </section>
+
+              <section class="box method">
+                <h3 class="subheading">Valmistamine</h3>
+                <ol class="list">
+                  <li>Sega ained kokku.</li>
+                  <li>Vormi lusikaga pätsid.</li>
+                  <li>Prae mõlemalt poolt kuldseks.</li>
+                </ol>
+              </section>
+            </div>
+
+            <figure class="recipe__media">
+              <img
+                src="/retsepti_pildid/mashed-potato-pancakes-2020.2.jpg"
+                alt="Kartulipudru pannkoogid"
+              />
+            </figure>
+          </div>
+        </article>
+
+        <section class="life">
+          <h2 class="life__title">Life hacks</h2>
+
+          <div class="life__grid">
+            <article class="hack">
+              <img
+                class="hack__img"
+                src="/retsepti_pildid/LH1.1.avif"
+                alt="Koorimise nipp"
+              />
+              <div class="hack__text">
+                <h3>Koori kartulid hetkega!</h3>
+                <p>
+                  Keeda neid koos koorega, siis tõmba lihtsalt koor kätega maha
+                  — nagu sokk jalast.
+                </p>
+              </div>
+            </article>
+
+            <article class="hack">
+              <img
+                class="hack__img"
+                src="/retsepti_pildid/LH2.1.png"
+                alt="Krõbeduse nipp"
+              />
+              <div class="hack__text">
+                <h3>Kartul päästab liiga soolase supi!</h3>
+                <p>
+                  Viska sisse kooritud kartul – imeb soola endasse nagu käsn.
+                </p>
+              </div>
+            </article>
+
+            <article class="hack">
+              <img
+                class="hack__img"
+                src="/retsepti_pildid/LH3.1.jpg"
+                alt="Maitsestamise nipp"
+              />
+              <div class="hack__text">
+                <h3>Külmad keedukartulid = homne friikaunistus</h3>
+                <p>Külmad kartulid praevad paremini kui värsked.</p>
+              </div>
+            </article>
+
+            <article class="hack">
+              <img
+                class="hack__img"
+                src="/retsepti_pildid/LH4.png"
+                alt="Jäägi kasutus"
+              />
+              <div class="hack__text">
+                <h3>Tuleviku ennustamine</h3>
+                <p>
+                  Pane kartul padja alla, et unenäos näha tulevast kartulisaaki.
+                  (Töötab iga teise neljapäeva öösel, täiskuu ajal.)
+                </p>
+              </div>
+            </article>
+
+            <article class="hack">
+              <img
+                class="hack__img"
+                src="/retsepti_pildid/LH5.png"
+                alt="Ahjukartuli nipp"
+              />
+              <div class="hack__text">
+                <h3>Tühi kõht?</h3>
+                <p>Kui tunned end tühjana – söö kartul, tema täidab sind.</p>
+              </div>
+            </article>
+
+            <article class="hack">
+              <img
+                class="hack__img"
+                src="/retsepti_pildid/LH6.png"
+                alt="Säilituse nipp"
+              />
+              <div class="hack__text">
+                <h3>Kartuli-turbo-laadija</h3>
+                <p>
+                  Torka kaks hambaorki kartulisse, kuumuta kartulit
+                  mikrolaineahjus 8 sekundit, ühenda telefon kartuliga – ja
+                  vaata, kuidas mitte midagi ei juhtu.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="caption">© <span id="year"></span> Kartuliprojekt</p>
+      </footer>
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
-  <script src="JavaScript.js"></script>
-</body>
+  </body>
 </html>
