@@ -1,153 +1,77 @@
-* {
-  box-sizing: border-box;
+/* --- ÜLDINE VÄIKSEM TEKST --- */
+.small-text {
+  font-size: 22px;
 }
 
-body {
-  margin: 0;
-  font-family: "Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #000;
-  background: #fff;
-  line-height: 1.45;
-}
-
-h1 {
-  font-size: 80px;
-  color: black;
-  text-align: center;
-}
-
-h2 {
-  font-size: 50px;
-  color: black;
-}
-
-p {
-  font-size: 30px;
-  color: black;
-}
-
-/* Kast, kus on ümarad nurgad */
-.box {
-  border-radius: 25px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-  padding: 20px;
-  margin: 20px;
-  border: 1px solid #ccc;
-}
-
-.container {
-  width: min(1100px, 100%);
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
-.site-header {
-  background: #FFF4AC;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-}
-
-.head-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-block: 12px;
-}
-
-.page-title {
-  margin: 0;
-  font-size: 80px;
-}
-
+/* --- PEALKIRJAD RETSEPTIKAARTIDEL --- */
 .heading {
   margin: 0 0 6px;
-  font-size: 50px;
+  font-size: 32px;
+  font-weight: 800;
 }
 
 .subheading {
   margin: 0 0 6px;
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .lead {
-  font-size: 30px;
+  font-size: 18px;
   margin: 0 0 8px;
+  line-height: 1.6;
 }
 
 .caption {
-  font-size: 25px;
+  font-size: 18px;
   margin: 0;
 }
 
-/* ====== RETSEPTIKAART ====== */
+/* =====================================================
+   RETSEPTIKAART
+   ===================================================== */
+
 .retsept {
-  background: #FFF4AC;
+  background: #fff8cc;                 /* veidi pehmem kollane */
   border-radius: 20px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  padding: 24px;
+  margin: 32px auto;
+  max-width: 1000px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
 }
 
+/* 2 veergu: vasakul tekst, paremal pilt */
 .recipe__grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
   align-items: stretch;
 }
 
+/* VASAK POOL */
 .recipe__left {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 18px;
 }
 
-.recipe__media {
-  margin: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.recipe__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Kollased sisemised kastid */
-.box {
-  background: #FFC800;
-  border-radius: 25px;
-  padding: 14px 16px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-}
-
-.titlebox {
-  align-self: start;
-}
-
-.ingredients,
-.method {
-  min-height: 140px;
-}
-
-/* Paigutus: pealkiri üleval, all kaks kasti kõrvuti */
-.recipe__left {
-  display: grid;
-  grid-template-rows: auto auto;
-}
-
-.recipe__left > .ingredients,
-.recipe__left > .method {
-  grid-row: 2;
-}
-
-.recipe__left {
-  grid-template-columns: 1fr 1fr;
-}
-
+/* PEALKIRJAKAST – üle kahe veeru */
 .titlebox {
   grid-column: 1 / -1;
+  background: #FFC800;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* KOOSTISOSAD JA VALMISTAMINE KÕRVUTI */
+.ingredients,
+.method {
+  background: #FFC800;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
 .ingredients {
@@ -158,92 +82,114 @@ p {
   grid-column: 2;
 }
 
-/* ====== LIFE HACKS ====== */
+.ingredients ul,
+.method ol {
+  margin: 8px 0 0 18px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* PAREM POOL – PILT */
+.recipe__media {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  align-self: stretch;           /* venita sama kõrgeks kui vasak pool */
+}
+
+.recipe__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;             /* täidab ala, ei jäta tühja ruumi */
+}
+
+/* =====================================================
+   LIFE HACKS
+   ===================================================== */
+
 .life {
-  background: #FFF4AC;
+  background: #FFC800;
   border-radius: 20px;
-  padding: 18px;
-  margin: 34px 0 50px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  padding: 24px;
+  margin: 40px 0 60px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
 }
 
 .life__title {
-  font-size: 50px;
-  margin: 0 0 12px;
+  font-size: 32px;
+  margin: 0 0 18px;
+  text-align: center;
 }
 
 .life__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 20px;
 }
 
 .hack {
-  background: #FFC800;
-  border-radius: 25px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  background: #fff8cc;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 12px;
-  padding: 12px;
+  padding: 14px;
 }
 
 .hack__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 25px;
-  background: #fff;
+  border-radius: 14px;
+  background: #fff8cc;
 }
 
 .hack__text h3 {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0 0 6px;
 }
 
 .hack__text p {
-  font-size: 25px;
+  font-size: 16px;
   margin: 0;
+  line-height: 1.5;
 }
 
-@media (max-width: 980px) {
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .retsept {
+    padding: 20px;
+  }
+
   .recipe__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;     /* pilt läheb alla */
+  }
+
+  .recipe__media {
+    order: 2;                       /* kõigepealt tekst, siis pilt */
+    height: 260px;
   }
 }
 
-@media (max-width: 700px) {
-  .page-title {
-    font-size: 56px;
-  }
-
-  .life__title,
-  .heading {
-    font-size: 36px;
-  }
-
-  .subheading,
-  .lead,
-  .hack__text h3 {
-    font-size: 24px;
-  }
-
-  .caption,
-  .hack__text p,
-  .small-text {
-    font-size: 18px;
-  }
-
-  .life__grid {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 600px) {
   .recipe__left {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;     /* koostisosad ja valmistamine alla üksteise */
   }
 
   .ingredients,
   .method {
     grid-column: 1;
   }
+
+  .life__grid {
+    grid-template-columns: 1fr;
+  }
 }
+
