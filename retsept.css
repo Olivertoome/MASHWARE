@@ -32,7 +32,7 @@
    ===================================================== */
 
 .retsept {
-  background: #fff8cc;                 /* veidi pehmem kollane */
+  background: #FFF4AC;                 /* veidi pehmem kollane */
   border-radius: 20px;
   padding: 24px;
   margin: 32px auto;
@@ -131,7 +131,7 @@
 }
 
 .hack {
-  background: #fff8cc;
+  background: #FFF4AC;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
   display: grid;
@@ -159,37 +159,4 @@
   line-height: 1.5;
 }
 
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 900px) {
-  .retsept {
-    padding: 20px;
-  }
-
-  .recipe__grid {
-    grid-template-columns: 1fr;     /* pilt läheb alla */
-  }
-
-  .recipe__media {
-    order: 2;                       /* kõigepealt tekst, siis pilt */
-    height: 260px;
-  }
-}
-
-@media (max-width: 600px) {
-  .recipe__left {
-    grid-template-columns: 1fr;     /* koostisosad ja valmistamine alla üksteise */
-  }
-
-  .ingredients,
-  .method {
-    grid-column: 1;
-  }
-
-  .life__grid {
-    grid-template-columns: 1fr;
-  }
-}
 
