@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap');
 
 ul.navbar {
@@ -5,12 +6,14 @@ ul.navbar {
   margin: 0;                    
   padding: 0 40px;              
   background-color: #333333;    
-  width: 100%;
+  width: 100vw;                 
+  margin-left: calc(-50vw + 50%); 
   display: flex;                
   justify-content: flex-end;    
   align-items: center;          
   height: 60px;                 
 }
+
 
 ul.navbar li {
   margin-left: 10px;
@@ -22,6 +25,8 @@ ul.navbar li a {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  border-radius: 0;              
+  background: none;              
   font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -35,13 +40,14 @@ html, body {
 
 .main-wrapper {
   max-width: 900px;
-  margin: 0 auto;
   padding: 0 16px;
 }
 
+
 .hero-full {
-  width: 100%;
+  width: 100vw;
   background-color: #ffffff;
+  margin-left: calc(-50vw + 50%);
   padding: 100px 0 100px;  
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   position: relative;
@@ -52,7 +58,6 @@ html, body {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 24px;
-  text-align: center;
 }
 
 .hero-content h1 {
@@ -62,15 +67,22 @@ html, body {
 }
 
 .hero-content p {
+  background: none;
+  padding: 0;
   font-size: 20px;
   line-height: 1.6;
   margin: 0;
 }
 
-body {
+.hero-content {
+  text-align: center;
+}
+
+body{
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 16px 16px;   
   font-family: "Bricolage Grotesque", sans-serif;
   color: #000;
   background: #FFF4AC;
-  margin: 0;
-  padding: 0;
 }
