@@ -36,7 +36,7 @@
 }
 
 .hero-content a.button:hover {
-  background: #ffe11e;
+  background: #FFF4AC;
   transform: translateY(1px) scale(1.02);
   top: 1px;
   box-shadow: 0 2px 0 #b38a00;
