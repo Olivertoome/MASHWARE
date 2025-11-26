@@ -155,7 +155,7 @@ p {
 
 .news-image {
   flex: 1;                     /* võtab parema poole */
-  background-image: url("uudised.png");
+  background-image: url("pildid_meelelahutus/uudised.png");
   background-size: cover;
   background-position: center;
 }
