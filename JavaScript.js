@@ -1,21 +1,4 @@
 document.querySelectorAll(".navbar a").forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    let colors = ["#ff0000", "#00ff00", "#0000ff", "#ff00ff"];
-    let i = 0;
-
-    const interval = setInterval(() => {
-      link.style.color = colors[i % colors.length];
-      i++;
-    }, 120);
-
-    link.addEventListener("mouseleave", () => {
-      clearInterval(interval);
-      link.style.color = "";
-    }, { once: true });
-  });
-});
-
-document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("mousemove", e => {
     const rect = link.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
