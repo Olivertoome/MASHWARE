@@ -1,7 +1,7 @@
 .fact-box {
   background: #FFC800;
   padding: 18px 22px;
-  border-radius: 28px;
+  border-radius: 25px;
   font-size: 18px;
   font-weight: 400;
   max-width: 900px;
@@ -92,3 +92,70 @@ p {
   border-radius: 25px;
 }
 
+.news-box {
+  display: flex;
+  overflow: hidden;
+  border-radius: 25px;
+  width: 100%;
+  margin: 20px auto;
+  height: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.0.1);
+  width: 100%;
+}
+
+.news-text {
+  flex: 1;                     /* võtab kogu vasaku poole */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertikaalselt keskele */
+  align-items: left;         /* horisontaalselt keskele */
+  background: #FFC800;
+}
+
+.news-text h2 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+}
+
+.news-box .button {
+  text-decoration: none;
+  color: #000;
+  background: #FFC800;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 0 #d4a600;
+  border: 1px solid #00000010;
+  width: fit-content;
+  margin: 0 auto;
+  display: inline-block;  
+  top: 0;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+}
+
+
+.news-box .button:hover {
+  background: #FFF4AC;
+  transform: translateY(1px) scale(1.02);
+  box-shadow: 0 2px 0 #b38a00;
+}
+
+
+.news-box .button.active {
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: 0 3px 0 #b38a00;
+}
+
+.news-image {
+  flex: 1;                     /* võtab parema poole */
+  background-image: url("pildid_meelelahutus/uudised.png");
+  background-size: cover;
+  background-position: center;
+}
