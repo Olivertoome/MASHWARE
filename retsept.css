@@ -92,19 +92,17 @@
   border-radius: 18px;
   overflow: hidden;
   background: #fff;
-  align-self: stretch;           /* venita sama kõrgeks kui vasak pool */
+  align-self: stretch;
 }
 
 .recipe__media img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;             /* täidab ala, ei jäta tühja ruumi */
+  object-fit: cover;
 }
 
-/* =====================================================
-   LIFE HACKS
-   ===================================================== */
+/*  LIFE HACKS */
 
 .life {
   background: #FFC800;
