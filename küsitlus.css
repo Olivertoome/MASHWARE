@@ -99,7 +99,7 @@ p {
   width: 100%;
   margin: 20px auto;
   height: 200px;
-  box-shadow: 0 4px 6px rgba(0,0,0,.0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   width: 100%;
 }
 
@@ -109,7 +109,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;     /* vertikaalselt keskele */
-  align-items: left;         /* horisontaalselt keskele */
+  align-items: flex-start;         /* horisontaalselt keskele */
   background: #FFC800;
 }
 
@@ -136,7 +136,7 @@ p {
   transition:
     background 0.15s ease,
     transform 0.15s ease,
-    box-shadow 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 
