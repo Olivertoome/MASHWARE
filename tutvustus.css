@@ -1,81 +1,91 @@
- /* fondid */
-h1{ font-size: 50px; font-weight: 800; margin: 16px 0 12px; }
-h2{ font-size: 25px; font-weight: 700; margin: 28px 0 12px; }
-h3{ font-size: 22px; font-weight: 700; margin: 20px 0 8px; }
-
- /* pealkirjad */
-h3{
-  line-height: 1.6;
-  margin: 10px 0 14px;  /* ülemine ja suurem alumine vahe */
-  background: #FFC800;     
-  padding: 14px 35px;  /* vahe teksti ja ääre vahel */
-  border-radius: 25px;     
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 16px 0 12px;
 }
 
- /* tekst */
-p{
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+}
+
+h3 {
+  background: #FFC800;
+  border-radius: 25px;
+  font-size: 22px;
+  font-weight: 700;
   line-height: 1.6;
   margin: 10px 0 14px;
-  background: #FFC800;    
-  padding: 35px 35px; 
-  border-radius: 25px;     
+  padding: 14px 35px;
 }
 
- /* pildid */
-img{
-  display: block;  /* plokkelement (terve rida) */
-  width: 60%;
-  height: auto;           
-  object-fit: contain; /* kärpimata */
+p {
+  background: #FFC800;
   border-radius: 25px;
-  margin: 12px auto;
-  background: #fff;        
+  line-height: 1.6;
+  margin: 10px 0 14px;
+  padding: 35px;
+}
 
+img {
+  background: #fff;
+  border-radius: 25px;
+  display: block;
+  height: auto;
+  margin: 12px auto;
+  object-fit: contain;
+  width: 60%;
 }
 
 .pildid-kõrvuti {
-  display: flex;              
-  justify-content: center;    
-  gap: 20px;                  
-  flex-wrap: wrap;            
+  column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
 }
 
 .pildid-kõrvuti img {
   width: 45%;                 
   height: auto;
   border-radius: 20px;
+  height: auto;
   object-fit: cover;
+  width: 45%;
 }
 
-/* kartuli sortide pildid */
+
 .sort {
-  max-width: 300px;    
+  display: block;
   height: 200px;
   margin: 12px auto;
-  display: block;
+  max-width: 300px;
   object-fit: contain;
 }
 
-/* allikad */
+
 .sources {
-  text-align: left;
+  color: #000;
   font-size: 18px;
   color: #000;
   line-height: 1.8;
+  text-align: left;
 }
 
 .sources a {
   color: #000;
+  font-weight: 500;
   text-decoration: none;
   font-weight: 500;
   display: inline;           
 }
 
 .sources a::after {
-  content: ", ";             
+  content: ", ";
 }
 
 .sources a:last-child::after {
-  content: "";               
+  content: "";
 }
 
