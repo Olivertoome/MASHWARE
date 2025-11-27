@@ -1,3 +1,4 @@
+/*Allikas on ChatGPT*/
 document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("mousemove", e => {
     const rect = link.getBoundingClientRect();
