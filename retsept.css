@@ -27,12 +27,8 @@
   margin: 0;
 }
 
-/* =====================================================
-   RETSEPTIKAART
-   ===================================================== */
-
 .retsept {
-  background: #FFF4AC;                 /* veidi pehmem kollane */
+  background: #FFF4AC;
   border-radius: 20px;
   padding: 24px;
   margin: 32px auto;
