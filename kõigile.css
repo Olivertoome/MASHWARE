@@ -50,9 +50,9 @@ html, body {
   padding: 0 16px;             
 }
 
-/* --- Täislaiusega kangas (nt esilehe hero-sektsioon) --- */
+/* hero-sektsioon) */
 .hero-full {
-  width: 100vw;                 /* kogu ekraani laiuse */
+  width: 100vw;                 /* kogu ekraani laius */
   background-color: #ffffff;    
   margin-left: calc(-50vw + 50%); 
   position: relative;           /* lubab kihistamist */
