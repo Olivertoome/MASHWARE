@@ -1,87 +1,97 @@
+/* "Bricolage Grotesque" */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap');
 
+/* navigatsiooniriba */
 ul.navbar {
-  list-style-type: none;        
-  margin: 0;                    
-  padding: 0 40px;              
+  list-style-type: none;        /* punktid loendilt */
+  margin: 0;                    /* välisvahe */
+  padding: 0 40px;              /* vahe vasakule ja paremale servale */
   background-color: #333333;    
   width: 100vw;                 
-  margin-left: calc(-50vw + 50%); 
-  display: flex;                
-  justify-content: flex-end;    
+  margin-left: calc(-50vw + 50%); /* element ulatuks servast servani, vältides keskelepiiranguid */
+  display: flex;                /* lingid reas */
+  justify-content: flex-end;    /* menüülingid paremale poole */
   align-items: center;          
   height: 60px;                 
 }
 
-
+/* iga menüüelemendi vahe */
 ul.navbar li {
-  margin-left: 10px;
+  margin-left: 10px;            
 }
 
+/* menüülinkide kujundus */
 ul.navbar li a {
-  display: block;
-  color: #ffffff;                
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  border-radius: 0;              
-  background: none;              
-  font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
+  display: block;             
+  color: #ffffff;           
+  text-align: center;          
+  padding: 14px 20px;        
+  text-decoration: none;       
+  border-radius: 0;            
+  background: none;             
+  font-weight: 500;            
+  transition: background-color 0.3s, color 0.3s; /* värvimuutus hoveril */
 }
 
-* { box-sizing: border-box; }
+/* kõik elemendid, padding ja border arvestatakse elemendi suuruse sisse */
+* {
+  box-sizing: border-box;
+}
 
+/* HTML ja body vaikevahed */
 html, body {
   margin: 0;
   padding: 0;
 }
 
+/* sisu laius */
 .main-wrapper {
-  max-width: 900px;
-  padding: 0 16px;
+  max-width: 900px;             
+  padding: 0 16px;             
 }
 
-
+/* --- Täislaiusega kangas (nt esilehe hero-sektsioon) --- */
 .hero-full {
-  width: 100vw;
-  background-color: #ffffff;
-  margin-left: calc(-50vw + 50%);
-  padding: 100px 0 100px;  
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 10;            
+  width: 100vw;                 /* kogu ekraani laiuse */
+  background-color: #ffffff;    
+  margin-left: calc(-50vw + 50%); 
+  position: relative;           /* lubab kihistamist */
+  z-index: 10;                  /* hero jääb teiste elementide peale */
 }
 
+/* hero-sektsiooni sisu */
 .hero-content {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: 980px;            
+  margin: 0 auto;              
+  padding: 0 24px;            
 }
 
+/* hero pealkiri */
 .hero-content h1 {
-  font-size: 50px;
-  font-weight: 800;
-  margin: 0 0 16px;
+  font-size: 50px;              
+  font-weight: 800;            
+  margin: 0 0 16px;          
 }
 
+/* hero lõik */
 .hero-content p {
-  background: none;
-  padding: 0;
-  font-size: 20px;
-  line-height: 1.6;
-  margin: 0;
+  background: none;            
+  padding: 0;                   
+  font-size: 20px;             
+  line-height: 1.6;           
+  margin: 0;                   
 }
 
 .hero-content {
   text-align: center;
 }
 
-body{
-  margin: 0 auto;
-  max-width: 980px;
-  padding: 0 16px 16px;   
-  font-family: "Bricolage Grotesque", sans-serif;
-  color: #000;
-  background: #FFF4AC;
+/* kogu lehe põhistiil */
+body {
+  margin: 0 auto;               
+  max-width: 980px;             
+  padding: 0 16px 16px;         
+  font-family: "Bricolage Grotesque", sans-serif; 
+  color: #000;                 
+  background: #FFF4AC;          
 }
