@@ -33,7 +33,7 @@ ul.navbar li a {
   transition: background-color 0.3s, color 0.3s; /* värvimuutus hoveril */
 }
 
-/* kõik elemendid, padding ja border arvestatakse elemendi suuruse sisse */
+/* --- Ühtlustab kõik elemendid nii, et padding ja border arvestatakse elemendi suuruse sisse --- */
 * {
   box-sizing: border-box;
 }
@@ -50,43 +50,45 @@ html, body {
   padding: 0 16px;             
 }
 
-/* hero-sektsioon) */
+/* --- Täislaiusega kangas (nt esilehe hero-sektsioon) --- */
 .hero-full {
-  width: 100vw;                 /* kogu ekraani laius */
+  width: 100vw;                 /* Võtab täpselt kogu ekraani laiuse */
   background-color: #ffffff;    
-  margin-left: calc(-50vw + 50%); 
+  margin-left: calc(-50vw + 50%); /* Nihutab elemendi, et see ulatuks servast servani (nagu navbar) */
+  padding: 100px 0 100px;       
   position: relative;           /* lubab kihistamist */
   z-index: 10;                  /* hero jääb teiste elementide peale */
 }
 
-/* hero-sektsiooni sisu */
+/* --- Hero-sektsiooni sisukonteiner --- */
 .hero-content {
   max-width: 980px;            
   margin: 0 auto;              
   padding: 0 24px;            
 }
 
-/* hero pealkiri */
+/* --- Hero pealkiri --- */
 .hero-content h1 {
   font-size: 50px;              
   font-weight: 800;            
   margin: 0 0 16px;          
 }
 
-/* hero lõik */
+/* Hero lõik*/
 .hero-content p {
-  background: none;            
-  padding: 0;                   
-  font-size: 20px;             
-  line-height: 1.6;           
-  margin: 0;                   
+  background: none;             /* Läbipaistev taust (erinevalt tavalistest p-lõikudest) */
+  padding: 0;                   /* Eemaldab siseserva vahed */
+  font-size: 20px;              /* Suurem font pealkirja all */
+  line-height: 1.6;             /* Õhuline tekst */
+  margin: 0;                    /* Eemaldab lõiguvahed */
 }
 
+/* --- Keskendab kogu hero sisu --- */
 .hero-content {
   text-align: center;
 }
 
-/* kogu lehe põhistiil */
+/*kogu lehe põhistiil */
 body {
   margin: 0 auto;               
   max-width: 980px;             
